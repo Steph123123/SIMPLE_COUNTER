@@ -7,7 +7,7 @@ import propTypes from "prop-types";
 // include your styles into the webpack bundle
 import "../styles/index.css";
 
-//Creo la funcioooon :D 
+//Creo la funcioooon :D
 
 function SimpleCounter(props) {
 	return (
@@ -31,35 +31,38 @@ function SimpleCounter(props) {
 					<line x1="17" y1="4" x2="19.75" y2="6" />
 				</svg>
 			</div>
-			<div className="four">{props.fourth % 10}</div>
-			<div className="three">{props.third % 10}</div>
-			<div className="two">{props.second % 10}</div>
-			<div className="one">{props.first % 10}</div>
+
+			<div className="counter">
+				<div className="four">{props.four % 10}</div>
+				<div className="three">{props.three % 10}</div>
+				<div className="two">{props.two % 10}</div>
+				<div className="one">{props.one % 10}</div>
+			</div>
 		</div>
 	);
 }
 // Defino los proptypes :v
 
 SimpleCounter.propTypes = {
-	fourth : propTypes.number,
-	third : propTypes.number,
-	second : propTypes.number,
-	first : propTypes.number
-
+	fourth: propTypes.number,
+	third: propTypes.number,
+	second: propTypes.number,
+	first: propTypes.number,
 };
 
-let counter=0
-setInterval(function(){
-	const four = Math.floor(counter/10000);
-	const three = Math.floor(counter/1000);
-	const two = Math.floor(counter/100);
-	const one = Math.floor(counter/10);
+//Definir el inicio del contador en cero
+let counter = 0;
+
+
+setInterval(function () {
+	const four = Math.floor(counter / 10000);
+	const three = Math.floor(counter / 1000);
+	const two = Math.floor(counter / 100);
+	const one = Math.floor(counter / 10);
 	counter++;
-//render your react application
-     ReactDOM.render(
-	     <SimpleCounter first={one} second ={two} third ={three} fourth={fourth} />, document.querySelector("#app"));
-},1000);
-
-
-
-
+	//render your react application
+	ReactDOM.render(
+		<SimpleCounter one={one} two={two} three={three} four={fourth} />,
+		document.querySelector("#app")
+	);
+}, 1000);
