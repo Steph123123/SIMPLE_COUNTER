@@ -9,16 +9,21 @@ html {
 
 .container div {
     background-color: rgb(3, 50, 56);
-    display: inline-block;
+    display: flex;
     font-size: 5rem;
-    width: 10rem;
+    width: 80rem;
     text-align: center;
     height: 10rem;
     color: white;  
     margin: auto;
     
+    margin-top: 2rem;
+    
 
 }
+
+
+
 body {
     background-color: black;
     margin: auto;
@@ -29,7 +34,7 @@ header {
     color: rgb(9, 108, 126);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: auto;
-    
+    margin-top: 5rem;
 }
 h1 {
     font-size: 5rem;
@@ -48,7 +53,7 @@ h1 {
     
 }
 img {
-    
+    margin-top: 5rem;
     width: 20rem;
 }
 
